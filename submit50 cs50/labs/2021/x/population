@@ -1,0 +1,42 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+// Get start size
+    int s;
+	do
+	{
+	  printf("Start size should be at least 9.\n ");
+	  s = get_int("Start size: ");
+	  int b = s;
+	}
+	while (s < 9 );
+// Get end size
+	int n ;
+	do
+	{
+	 printf("End  size should be at least start size or larger.\n ");
+	 n = get_int("");
+	}
+	while (n < s);
+// Calculate years required to get to end size
+	 int counter = 0;
+	 int b = s;
+	 do
+	 {
+	 s = s + (s / 3) - (s  / 4);	     
+	 counter = counter +1;
+// Print out results
+	 printf("Start size: %i\n", b);
+	 printf("End size: %i\n", s);
+	 printf("Years: %i\n", counter);
+	 }
+	 while (s < n);
+}
+
+
+
+
+
+
