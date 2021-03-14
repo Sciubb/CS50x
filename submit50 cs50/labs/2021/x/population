@@ -27,6 +27,8 @@ int main(void)
 	 {
 	 s = s + (s / 3) - (s  / 4);	     
 	 counter = counter +1;
+	 if (n == b)
+	    counter = 0;
 // Print out results
 	 printf("Start size: %i\n", b);
 	 printf("End size: %i\n", s);
